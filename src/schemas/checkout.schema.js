@@ -10,4 +10,5 @@ export const schemaCheckout = Joi.object({
     phone: Joi.string().required(),
     email: Joi.string().email().required(),
     zipcode: Joi.string().required(),
+    payment: Joi.string().required(),
 });
