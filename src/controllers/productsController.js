@@ -10,6 +10,15 @@ export async function postPeripherals(req, res) {
     }
 }
 
+export async function deletePeripherals(req, res) {
+  try {
+      await db.collection("peripherals").deleteMany();
+      res.send("deleted");
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+}
+
 export async function getPeripherals(req, res) {
     try {
         const products = await db.collection("peripherals").find().toArray();
