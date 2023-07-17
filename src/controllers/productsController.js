@@ -94,4 +94,7 @@ export async function getCellphones(req, res) {
       return res.status(500).send(err.message);
     }
 }
-  
+
+export function sendDiscount(req, res) {
+  res.status(200).send(res.locals.value)
+}
