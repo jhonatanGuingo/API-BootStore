@@ -5,7 +5,7 @@ import { schemaDiscount } from "../schemas/product.schemas.js";
 import { existDiscount } from "../middlewares/products.js";
 
 const productsRouter = Router();
-//
+
 productsRouter.post("/peripherals", postPeripherals);
 productsRouter.get("/peripherals", getPeripherals);
 productsRouter.delete("/peripherals", deletePeripherals);
