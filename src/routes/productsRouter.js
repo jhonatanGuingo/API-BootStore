@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getCellphones, getComputers, getGames, getHardware, getPeripherals, postCellphones, postComputers, postGames, postHardware, postPeripherals, sendDiscount } from "../controllers/productsController.js";
+import { deletePeripherals, getCellphones, getComputers, getGames, getHardware, getPeripherals, postCellphones, postComputers, postGames, postHardware, postPeripherals, sendDiscount } from "../controllers/productsController.js";
 import { validateSchema } from "../middlewares/validateSchema.js";
 import { schemaDiscount } from "../schemas/product.schemas.js";
 import { existDiscount } from "../middlewares/products.js";
@@ -8,6 +8,7 @@ const productsRouter = Router();
 
 productsRouter.post("/peripherals", postPeripherals);
 productsRouter.get("/peripherals", getPeripherals);
+productsRouter.delete("/peripherals", deletePeripherals);
 
 productsRouter.post("/games", postGames);
 productsRouter.get("/games", getGames);
